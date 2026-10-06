@@ -1,0 +1,30 @@
+{
+  "ocr-runtime\\tessdata\\spa.traineddata": {
+    "bytes": 13570187,
+    "sha256": "e2c1ffdad8b30f26c45d4017a9183d3a7f9aa69e59918be4f88b126fac99ab2c"
+  },
+  "ocr-runtime\\tessdata\\symbols.traineddata": {
+    "bytes": 23466654,
+    "sha256": "daa0c97d651c19fba3b25e81317cd697e9908c8208090c94c3905381c23fc047"
+  },
+  "math-models\\config.yaml": {
+    "bytes": 124,
+    "sha256": "f56b329089d145308cafe31772b05b84a2b7a9c85a3d47546c2485c8c00534df"
+  },
+  "math-models\\decoder.onnx": {
+    "bytes": 50952726,
+    "sha256": "bd695497bf1b22279b7626f5916c79226e1e244c84355f8da7edfd2d921d0072"
+  },
+  "math-models\\encoder.onnx": {
+    "bytes": 89008136,
+    "sha256": "01bf5dc25539ca0cd5b1bd29296ea495977a6ba5f629dc4178277809d26e5e7d"
+  },
+  "math-models\\image_resizer.onnx": {
+    "bytes": 38967751,
+    "sha256": "e0b075c39700f64d50400f39c8fc186bbb3b5d84d31864008313f376603aca9d"
+  },
+  "math-models\\tokenizer.json": {
+    "bytes": 24174,
+    "sha256": "1dc27b18d6a518d0d5ff3f4bb7bd98521fe80ad39e5b2a246d4109f1bb9d5019"
+  }
+}

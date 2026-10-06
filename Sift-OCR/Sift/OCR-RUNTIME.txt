@@ -1,0 +1,35 @@
+Sift portable OCR runtime
+
+Engine: Tesseract 5.5.3.20260724 (64-bit)
+Source: Tesseract-5.5.3-Setup.exe from the original source handoff.
+Installer SHA-256: bee9e3434bd94fd65387d9be28cd467a41f61b1275383b55b0f59a1331270ae4
+Extracted locally using 7-Zip, without running the installer or changing PATH,
+registry settings, or an existing system-wide Tesseract installation.
+
+English model: official tesseract-ocr/tessdata_best, tag 4.1.0
+URL: https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/4.1.0/eng.traineddata
+SHA-256: 8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba
+Model license: Apache-2.0, https://github.com/tesseract-ocr/tessdata_best/blob/4.1.0/LICENSE
+
+Reconstruct from this handoff (7-Zip required on the build machine only):
+  7z x Tesseract-5.5.3-Setup.exe -oocr-runtime -y
+  Download the English model URL above to ocr-runtime\tessdata\eng.traineddata.
+  Verify its SHA-256 before building.
+
+The original NSIS installer downloads language models rather than embedding
+them. The packaged Sift executable includes the extracted engine and the
+verified model, so no installer or download is needed at first capture.
+
+Tesseract source is supplied in tesseract-5.5.3-source.
+Engine notices are in ocr-runtime\doc; upstream DLL licenses also apply.
+
+Symbol/Spanish update:
+- spa.traineddata: official tessdata_best Spanish model, tag 4.1.0
+  https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/4.1.0/spa.traineddata
+  SHA256 e2c1ffdad8b30f26c45d4017a9183d3a7f9aa69e59918be4f88b126fac99ab2c
+- symbols.traineddata: official tessdata English model, tag 4.1.0, renamed
+  to allow legacy character recognition alongside the best English LSTM.
+  https://raw.githubusercontent.com/tesseract-ocr/tessdata/4.1.0/eng.traineddata
+  SHA256 daa0c97d651c19fba3b25e81317cd697e9908c8208090c94c3905381c23fc047
+Both models are Apache-2.0 licensed. See the engine's existing LICENSE.
+For math models and sources, see math-models/README.txt.
