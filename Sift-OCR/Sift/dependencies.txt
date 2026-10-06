@@ -1,0 +1,29 @@
+SIFT OCR TRAY APP — DEPENDENCIES
+
+REQUIRED TO BUILD SIFT.EXE
+- Windows 10 or later, 64-bit
+- Python 3.11 (64-bit, the validated build environment)
+- Pillow 10 or later: screen capture and image cropping
+- pystray 0.19.5 or later: notification-area (system tray) icon and menu
+- PyInstaller 6.22 or later: packages the Python app as a Windows executable
+- Tesseract OCR 5.5.3 portable runtime, extracted from the supplied installer
+- Official tessdata_best English model (4.1.0); see OCR-RUNTIME.txt for provenance
+- Official tessdata_best Spanish and tessdata legacy English models (4.1.0)
+- rapid-latex-ocr 0.0.9, ONNX Runtime, tokenizers: offline formula recognition
+- NumPy 1.26.4 and OpenCV 4.11: glyph-size estimation and preprocessing
+- pylatexenc 2.10: readable Unicode formula output
+- Bundled ONNX model files in math-models; see math-models/README.txt
+
+The Python package dependencies are listed in requirements.txt.
+
+RUNTIME REQUIREMENTS FOR THE RECIPIENT
+- Windows 10 or later, 64-bit
+- No separate Python installation is needed when using Sift.exe
+- No separate Tesseract installation or first-run download is needed.
+  The portable engine and English model are included in Sift.exe.
+
+SOURCE
+- The included tesseract-5.5.3-source folder is the Tesseract source supplied
+  for this project. It is included for development/reference; building Sift.exe
+  uses the extracted portable runtime rather than compiling Tesseract from source.
+- Tesseract is licensed under Apache License 2.0. See the source folder's LICENSE.

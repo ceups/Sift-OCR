@@ -1,0 +1,11 @@
+.venv*/
+__pycache__/
+*.pyc
+build/
+dist/
+ocr-runtime/
+math-models/*.onnx
+math-models/tokenizer.json
+*.traineddata
+Tesseract-*-Setup.exe
+tesseract-*-source/
